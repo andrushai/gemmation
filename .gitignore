@@ -19,7 +19,8 @@ Thumbs.db
 /vendor
 
 # composer itself is not needed
-composer.phar
+#but composer will be need on server
+#composer.phar
 
 # Mac DS_Store Files
 .DS_Store
