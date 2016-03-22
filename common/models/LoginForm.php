@@ -10,11 +10,13 @@ use yii\base\Model;
 class LoginForm extends Model
 {
     public $username;
+    public $email;
     public $password;
     public $rememberMe = true;
 
     private $_user;
 
+    const SCENARIO_LOGIN_ADMIN = 'loginAdmin';
 
     /**
      * @inheritdoc
@@ -24,6 +26,7 @@ class LoginForm extends Model
         return [
             // username and password are both required
             [['username', 'password'], 'required'],
+            ['email', 'required', 'on' => self::SCENARIO_LOGIN_ADMIN],
             // rememberMe must be a boolean value
             ['rememberMe', 'boolean'],
             // password is validated by validatePassword()
