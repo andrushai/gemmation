@@ -64,6 +64,7 @@ AppAsset::register($this);
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
+        <p>Переменная из контроллера, отображаемая в шаблоне: <?= Html::encode($this->context->some_string) ?></p>
         <?= $content ?>
     </div>
 </div>

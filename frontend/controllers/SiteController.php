@@ -18,6 +18,8 @@ use yii\filters\AccessControl;
  */
 class SiteController extends Controller
 {
+    
+    public $some_string = 'Some string from controller';
     /**
      * @inheritdoc
      */
