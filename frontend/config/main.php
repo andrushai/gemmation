@@ -38,4 +38,10 @@ return [
         */
     ],
     'params' => $params,
+
+    'modules' => [
+        'admin' => [
+            'class' => 'frontend\modules\admin\Module',
+        ],
+    ],
 ];
