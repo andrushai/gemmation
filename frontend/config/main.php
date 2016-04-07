@@ -33,6 +33,14 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'material' => 'admin/default/index',
+                //'site/index?name=Андрей' => 'site/index',
+                [
+                    'pattern' => 'CongratulationsAndrew',
+                    'route' => 'site/index',
+                    'defaults' => ['name' => 'Андрей'],
+                    'suffix' => '.thelongestformatintheworld',
+                ],
             ],
         ],
         
@@ -44,4 +52,6 @@ return [
             'class' => 'frontend\modules\admin\Module',
         ],
     ],
+    // 'defaultRoute' => 'admin/default/index',
+    // 'catchAll' => ['admin/default/index'],
 ];

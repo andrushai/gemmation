@@ -3,12 +3,24 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $this->title = 'Materialize Parallax';
 // $bg1 = Html::img(->baseUrl.'/background1.jpg')
 $bg1 = 'http://materializecss.com/templates/parallax-template/background1.jpg';
 $bg2 = 'http://materializecss.com/templates/parallax-template/background2.jpg';
 $bg3 = 'http://materializecss.com/templates/parallax-template/background3.jpg';
+
+$url1 = Url::to();
+$url2 = Url::to(['index']);
+$url3 = Url::to(['/site/index']);
+$url4 = Url::to(['site/index']);
+$url5 = Url::home();
+$url6 = Url::base();
+$url7 = Url::previous();
+$url8 = Url::current();
+// $url9 - checking urlManager rules in config
+$url9 = Url::to(['/site/index', 'name' => 'Андрей']);
 ?>
   <div id="index-banner" class="admin-default-index parallax-container">
     <div class="section no-pad-bot">
@@ -25,9 +37,82 @@ $bg3 = 'http://materializecss.com/templates/parallax-template/background3.jpg';
 
       </div>
     </div>
-    <div class="parallax"><img alt="Unsplashed background img 1" src=<?=$bg1?>></div>
+    <div class="parallax"><img alt="Unsplashed background img 1" src=<?=Html::encode($bg1)?>></div>
   </div>
 
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h5>Url Helper</h5>
+          <p>
+            <table class="responsive-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Button</th>
+                </tr>
+              </thead>
+            
+              <tbody>
+                <tr>
+                  <td><code><?="Url::to()"?></code></td>
+                  <td><a href=<?=Html::encode($url1)?> class="btn"><?=Html::encode($url1)?></a></td>
+                </tr>
+                <tr>
+                  <td><code><?="Url::to(['index'])"?></code></td>
+                  <td><a href=<?=Html::encode($url2)?> class="btn"><?=Html::encode($url2)?></a></td>
+                </tr>
+                <tr>
+                  <td><code><?="Url::to(['/site/index'])"?></code></td>
+                  <td><a href=<?=Html::encode($url3)?> class="btn"><?=Html::encode($url3)?></a></td>
+                </tr>
+                <tr>
+                  <td><code><?="Url::to(['site/index'])"?></code></td>
+                  <td><a href=<?=Html::encode($url4)?> class="btn"><?=Html::encode($url4)?></a></td>
+                </tr>
+                <tr>
+                  <td><code><?="Url::home()"?></code></td>
+                  <td><a href=<?=Html::encode($url5)?> class="btn"><?=Html::encode($url5)?></a></td>
+                </tr>
+                <tr>
+                  <td><code><?="Url::base()"?></code></td>
+                  <td><a class="btn disabled">Base Url unvisible</a></td>
+                </tr>
+                <tr>
+                  <td><code><?="Url::previous()"?></code></td>
+                  <td><a href=<?=Html::encode($url7)?> class="btn"><?=Html::encode($url7)?></a></td>
+                </tr>
+                <tr>
+                  <td><code><?="Url::current()"?></code></td>
+                  <td><a href=<?=Html::encode($url8)?> class="btn"><?=Html::encode($url8)?></a></td>
+                </tr>
+                <tr>
+                  <td><code><?="Url::to(['/site/index', 'name' => 'Андрей'])"?></code></td>
+                  <td><a href=<?=Html::encode($url9)?> class="btn"><?=Html::encode($url9)?></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img alt="Unsplashed background img 2" src=<?=Html::encode($bg2)?>></div>
+  </div>
 
   <div class="container">
     <div class="section">
@@ -62,24 +147,6 @@ $bg3 = 'http://materializecss.com/templates/parallax-template/background3.jpg';
         </div>
       </div>
 
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img alt="Unsplashed background img 2" src=<?=$bg2?>></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
@@ -100,7 +167,7 @@ $bg3 = 'http://materializecss.com/templates/parallax-template/background3.jpg';
         </div>
       </div>
     </div>
-    <div class="parallax"><img alt="Unsplashed background img 3" src=<?=$bg1?>></div>
+    <div class="parallax"><img alt="Unsplashed background img 3" src=<?=Html::encode($bg3)?>></div>
   </div>
 
 
