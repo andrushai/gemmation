@@ -24,13 +24,15 @@ AppAsset::register($this);
 
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <a id="logo-container" href=<?=Url::to(['index'])?> class="brand-logo">Material</a>
       <ul class="right hide-on-med-and-down">
         <li><a href=<?=Url::home()?>>Application</a></li>
+        <li><a href=<?=Url::to(['url'])?>>Url</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href=<?=Url::home()?>>Application</a></li>
+        <li><a href=<?=Url::to(['url'])?>>Url</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
