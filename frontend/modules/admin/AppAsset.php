@@ -17,6 +17,7 @@ class AppAsset extends AssetBundle
 {
     public $sourcePath = '@frontend/modules/admin/assets';
     public $css = [
+        '//fonts.googleapis.com/icon?family=Material+Icons',
         'style.css',
     ];
     public $js = [
