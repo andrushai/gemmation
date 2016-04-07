@@ -6,9 +6,9 @@ use yii\helpers\Html;
 
 $this->title = 'Materialize Parallax';
 // $bg1 = Html::img(->baseUrl.'/background1.jpg')
-$bg1 = '1';
-$bg2 = '1';
-$bg3 = '1';
+$bg1 = 'http://materializecss.com/templates/parallax-template/background1.jpg';
+$bg2 = 'http://materializecss.com/templates/parallax-template/background2.jpg';
+$bg3 = 'http://materializecss.com/templates/parallax-template/background3.jpg';
 ?>
   <div id="index-banner" class="admin-default-index parallax-container">
     <div class="section no-pad-bot">
