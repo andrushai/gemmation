@@ -6,7 +6,8 @@ use yii\helpers\Html;
 
 $this->title = 'Materialize Parallax';
 // $bg1 = Html::img(->baseUrl.'/background1.jpg')
-$bg1 = '1';
+// $asset = $this->params['asset'];
+$bg1 = Html::img('/background1.jpg', ['alt' => 'Unsplashed background img 1']);
 $bg2 = '1';
 $bg3 = '1';
 ?>
@@ -25,7 +26,7 @@ $bg3 = '1';
 
       </div>
     </div>
-    <div class="parallax"><img alt="Unsplashed background img 1" src=<?=$bg1?>></div>
+    <div class="parallax"><?=$bg1?></div>
   </div>
 
 

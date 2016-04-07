@@ -7,7 +7,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use frontend\modules\admin\AppAsset;
 
-AppAsset::register($this);
+$asset = AppAsset::register($this);
 $homeUrl = Url::to(['/site/index']);
 ?>
 <?php $this->beginPage() ?>
@@ -37,6 +37,8 @@ $homeUrl = Url::to(['/site/index']);
     </div>
   </nav>
     <?= $content ?>
+    <?=Yii::$app->getAssetManager()->getPublishedUrl('@frontend/modules/admin/assets/background1.jpg')?>
+    <?=Html::img(Yii::$app->getAssetManager()->getPublishedUrl('@frontend/modules/admin/assets/background1.jpg'))?>
   
   <footer class="page-footer teal">
     <div class="container">
